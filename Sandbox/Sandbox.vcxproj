@@ -13,19 +13,19 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{eefaea77-ad33-4f11-a580-ca34b13e467a}</ProjectGuid>
-    <RootNamespace>AptechEngine</RootNamespace>
+    <ProjectGuid>{8c9f3c31-89ba-4b7e-826d-b6eacc14c307}</ProjectGuid>
+    <RootNamespace>Sandbox</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -82,10 +82,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="src\Test.h" />
+    <ProjectReference Include="..\AptechEngine\AptechEngine.vcxproj">
+      <Project>{eefaea77-ad33-4f11-a580-ca34b13e467a}</Project>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Test.cpp" />
+    <ClCompile Include="src\Application.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
